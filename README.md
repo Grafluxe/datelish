@@ -2,8 +2,6 @@
 
 Originally written to help work with calendar data, this class helps parse, format, and transform dates. It supports both Node and browser use.
 
-***
-
 ### Static Methods
 
 #### Datelish.toLittleEndian(*date, divider = "/", prepend0 = true*);
@@ -302,22 +300,39 @@ Datelish.nextMonth();
 
 See the full documentation [here](http://grafluxe.com/doc/js/datelish/Datelish.html).
 
-***
+## Usage
 
-## Build Scripts
+Node:
 
-- `dist` - Prepares the file for distribution (lints and builds).
-- `lint` - Lints the source folder.
-- `build` - Babelifies and minifies the class.
-- `doc` - Outputs documentation.
+```
+var Datelish = require("datelish");
+```
+
+Node (minified version):
+
+```
+var Datelish = require("datelish/dist/Datelish.min");
+```
+
+Browser:
+
+```
+import Datelish from "datelish";
+```
+
+Browser (minified version):
+
+```
+import Datelish from "datelish/dist/Datelish.min";
+```
+```
+<script src="node_modules/datelish/dist/Datelish.min.js"></script>
+```
 
 ## Notes
 
-- You only need to interact with the build scripts if you:
-  - Are extending/altering this package.
-  - Need to create documentation for local use (otherwise, visit the online [docs](http://grafluxe.com/doc/js/datelish/Datelish.html)).
-- This class is written in ES6.
-- The minified/babelified version of this class has been purposefully excluded from the **npm** package. If you're *not* running your own build scripts to handle transpiling and minification, you can get the web ready version by visiting the git repo or by running `npm run build`.
+- The source code is written in ES6 and transpiled with Babel.
+- If you need to create documentation for local use, run `npm run doc`. Otherwise, visit the online [docs](http://grafluxe.com/doc/js/datelish/Datelish.html).
 
 ## License
 

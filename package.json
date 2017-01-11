@@ -1,17 +1,18 @@
 {
   "name": "datelish",
   "description": "This class helps parse, format, and transform dates.",
-  "main": "src/Datelish.js",
+  "main": "dist/Datelish.js",
   "scripts": {
-    "postinstall": "mkdirp dist/",
-    "dist": "npm run lint -s && npm run build -s",
+    "prepublish": "npm run dist -s",
+    "dist": "npm run lint -s && npm run babel -s && npm run minify -s",
     "lint": "jshint src/",
-    "build": "babel src/ | uglifyjs -mco dist/Datelish.min.js --preamble \"/*github.com/Grafluxe/datelish*/\"",
+    "babel": "babel src/ -o dist/Datelish.js",
+    "minify": "uglifyjs dist/Datelish.js -mco dist/Datelish.min.js --preamble \"/*github.com/Grafluxe/datelish*/\"",
     "doc": "jsdoc -c .jsdocrc"
   },
   "author": "Leandro Silva (http://grafluxe.com)",
   "homepage": "https://github.com/Grafluxe/datelish",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "license": "SEE LICENSE IN LICENSE.MD",
   "repository": {
     "type": "git",
@@ -31,7 +32,6 @@
     "jsdoc": "^3.4.3",
     "jshint": "^2.9.4",
     "minami": "^1.1.1",
-    "mkdirp": "^0.5.1",
     "uglify-js": "^2.7.5"
   }
 }
