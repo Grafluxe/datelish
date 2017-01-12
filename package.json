@@ -12,8 +12,8 @@
   },
   "author": "Leandro Silva (http://grafluxe.com)",
   "homepage": "https://github.com/Grafluxe/datelish",
-  "version": "1.0.5",
-  "license": "SEE LICENSE IN LICENSE.MD",
+  "version": "1.0.6",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/Grafluxe/datelish.git"

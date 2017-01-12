@@ -2,6 +2,53 @@
 
 Originally written to help work with calendar data, this class helps parse, format, and transform dates. It supports both Node and browser use.
 
+## Usage
+
+### Node
+
+`npm install datelish`
+
+```
+var Datelish = require("datelish");
+```
+
+Minified version:
+
+```
+var Datelish = require("datelish/dist/Datelish.min");
+```
+
+[Visit package on npm](https://www.npmjs.com/package/datelish)
+
+[![npm](https://nodei.co/npm/datelish.png)](https://www.npmjs.com/package/datelish)
+
+### Browser
+
+```
+import Datelish from "datelish";
+```
+
+Minified version:
+
+```
+import Datelish from "datelish/dist/Datelish.min";
+```
+
+Script tag:
+
+```
+<script src="node_modules/datelish/dist/Datelish.min.js"></script>
+```
+
+## Notes
+
+- This project is lightweight and dependency free.
+- The source code is written in ES6 and transpiled with Babel.
+- If you need to create documentation for local use, run `npm run doc`. Otherwise, visit the online [docs](http://grafluxe.com/doc/js/datelish/Datelish.html).
+
+
+## Samples
+
 ### Static Methods
 
 #### Datelish.toLittleEndian(*date, divider = "/", prepend0 = true*);
@@ -299,40 +346,6 @@ Datelish.nextMonth();
 -
 
 See the full documentation [here](http://grafluxe.com/doc/js/datelish/Datelish.html).
-
-## Usage
-
-Node:
-
-```
-var Datelish = require("datelish");
-```
-
-Node (minified version):
-
-```
-var Datelish = require("datelish/dist/Datelish.min");
-```
-
-Browser:
-
-```
-import Datelish from "datelish";
-```
-
-Browser (minified version):
-
-```
-import Datelish from "datelish/dist/Datelish.min";
-```
-```
-<script src="node_modules/datelish/dist/Datelish.min.js"></script>
-```
-
-## Notes
-
-- The source code is written in ES6 and transpiled with Babel.
-- If you need to create documentation for local use, run `npm run doc`. Otherwise, visit the online [docs](http://grafluxe.com/doc/js/datelish/Datelish.html).
 
 ## License
 
