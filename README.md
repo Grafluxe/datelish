@@ -57,8 +57,8 @@ Script tag:
 Datelish.toLittleEndian(new Date(2016, 1, 1));
 // 01/02/2016
 
-Datelish.toLittleEndian(new Date(2016, 1, 1), "-", false);
-// 1-2-2016
+Datelish.toLittleEndian(Datelish.today(), "-", false);
+// 10-1-2016
 ```
 
 -
@@ -109,6 +109,9 @@ Datelish.toBigEndian(new Date(2016, 1, 1), "", false);
 
 ```
 Datelish.fromBigEndian("2016/2/1");
+// Mon Feb 01 2016 00:00:00 GMT-0500 (EST)
+
+Datelish.fromBigEndian("2016.02.01");
 // Mon Feb 01 2016 00:00:00 GMT-0500 (EST)
 ```
 
@@ -287,6 +290,9 @@ Datelish.toMinutes(90, false);
 ```
 Datelish.daysFromDate(new Date(2016, 1, 1), 5);
 // Sat Feb 06 2016 00:00:00 GMT-0500 (EST)
+
+Datelish.daysFromDate(Datelish.today(), -1);
+// Mon Jan 09 2017 00:00:00 GMT-0500 (EST)
 ```
 
 -
