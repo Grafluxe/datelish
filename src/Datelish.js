@@ -1,13 +1,13 @@
 /**
  * @author Leandro Silva | Grafluxe, 2016-2017
  * @license MIT
+ *
+ * @classdesc Originally written to help work with calendar data, this class helps parse, format, and
+ *            transform dates. It supports both Node and browser use.
  */
 
 //jshint esversion:6, node:true
 
-/**
-* Originally written to help work with calendar data, this class helps parse, format, and transform dates. It supports both Node and browser use.
-*/
 class Datelish {
     /**
      * Returns an array of month names.
