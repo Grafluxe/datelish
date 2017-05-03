@@ -7,7 +7,8 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
- * @author Leandro Silva | Grafluxe, 2016-2017
+ * @author Leandro Silva
+ * @copyright 2016-2017 Leandro Silva (http://grafluxe.com)
  * @license MIT
  *
  * @classdesc Originally written to help work with calendar data, this class helps parse, format, and
@@ -92,8 +93,8 @@ var Datelish = function () {
      * @param   {Number}        from A four digit year.
      * @param   {Number|String} to   A number or string. If a string is used, a range is returned with
      *                               the 'from' year plus amount in the 'to' string. For example: Assuming
-     *                               the current year is 2012, both DateUtls.years(DateUtls.currYear, 2014)
-     *                               and DateUtls.years(DateUtls.currYear, "2") return [2012, 2013, 2014].
+     *                               the current year is 2012, both Datelish.years(Datelish.currYear, 2014)
+     *                               and Datelish.years(Datelish.currYear, "2") return [2012, 2013, 2014].
      * @returns {Array}
      */
 
