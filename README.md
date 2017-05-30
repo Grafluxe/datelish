@@ -44,7 +44,7 @@ Script tag:
 
 - This project is lightweight and dependency free.
 - The source code is written in ES6 and transpiled with Babel.
-- If you need to create documentation for local use, run `npm run doc`. Otherwise, visit the online [docs](http://grafluxe.com/doc/js/datelish/Datelish.html).
+- If you need to create documentation for local use, run `npm run doc`. Otherwise, visit the online [docs](http://grafluxe.com/o/doc/datelish/Datelish.html).
 
 
 ## Samples
@@ -351,7 +351,7 @@ Datelish.nextMonth();
 
 -
 
-See the full documentation [here](http://grafluxe.com/doc/js/datelish/Datelish.html).
+See the full documentation [here](http://grafluxe.com/o/doc/datelish/Datelish.html).
 
 ## License
 
