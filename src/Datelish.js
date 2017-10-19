@@ -1,3 +1,5 @@
+// jshint esversion:6, node:true
+
 /**
  * @author Leandro Silva
  * @copyright 2016-2017 Leandro Silva (http://grafluxe.com)
@@ -6,8 +8,6 @@
  * @classdesc Originally written to help work with calendar data, this class helps parse, format, and
  *            transform dates. It supports both Node and browser use.
  */
-
-// jshint esversion:6, node:true
 
 class Datelish {
   /**

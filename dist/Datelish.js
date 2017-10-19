@@ -6,6 +6,8 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+// jshint esversion:6, node:true
+
 /**
  * @author Leandro Silva
  * @copyright 2016-2017 Leandro Silva (http://grafluxe.com)
@@ -14,8 +16,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @classdesc Originally written to help work with calendar data, this class helps parse, format, and
  *            transform dates. It supports both Node and browser use.
  */
-
-// jshint esversion:6, node:true
 
 var Datelish = function () {
   function Datelish() {
