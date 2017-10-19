@@ -438,29 +438,35 @@ var Datelish = function () {
     }
 
     /**
-     * Returns the previous month.
+     * Returns the previous month of a given date.
+     * @param   {Date=} date=null The date to check against. If null, date will equal today.
      * @returns {Date}
      */
 
   }, {
     key: "prevMonth",
     value: function prevMonth() {
-      var today = Datelish.today();
+      var date = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
 
-      return new Date(today.getFullYear(), today.getMonth() - 1, 1);
+      date = date || Datelish.today();
+
+      return new Date(date.getFullYear(), date.getMonth() - 1, 1);
     }
 
     /**
-     * Returns the next month.
+     * Returns the next month of a given date.
+     * @param   {Date=} date=null The date to check against. If null, date will equal today.
      * @returns {Date}
      */
 
   }, {
     key: "nextMonth",
     value: function nextMonth() {
-      var today = Datelish.today();
+      var date = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
 
-      return new Date(today.getFullYear(), today.getMonth(), Datelish.daysTotal(today.getMonth(), today.getFullYear()) + 1);
+      date = date || Datelish.today();
+
+      return new Date(date.getFullYear(), date.getMonth(), Datelish.daysTotal(date.getMonth(), date.getFullYear()) + 1);
     }
 
     /**

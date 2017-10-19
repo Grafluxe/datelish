@@ -333,23 +333,25 @@ class Datelish {
   }
 
   /**
-   * Returns the previous month.
+   * Returns the previous month of a given date.
+   * @param   {Date=} date=null The date to check against. If null, date will equal today.
    * @returns {Date}
    */
-  static prevMonth() {
-    let today = Datelish.today();
+  static prevMonth(date = null) {
+    date = date || Datelish.today();
 
-    return new Date(today.getFullYear(), today.getMonth() - 1, 1);
+    return new Date(date.getFullYear(), date.getMonth() - 1, 1);
   }
 
   /**
-   * Returns the next month.
+   * Returns the next month of a given date.
+   * @param   {Date=} date=null The date to check against. If null, date will equal today.
    * @returns {Date}
    */
-  static nextMonth() {
-    let today = Datelish.today();
+  static nextMonth(date = null) {
+    date = date || Datelish.today();
 
-    return new Date(today.getFullYear(), today.getMonth(), Datelish.daysTotal(today.getMonth(), today.getFullYear()) + 1);
+    return new Date(date.getFullYear(), date.getMonth(), Datelish.daysTotal(date.getMonth(), date.getFullYear()) + 1);
   }
 
   /**
