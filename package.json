@@ -4,10 +4,11 @@
   "main": "dist/Datelish.js",
   "scripts": {
     "prepare": "npm run dist -s",
-    "dist": "npm run lint -s && npm run babel -s && npm run minify -s",
+    "dist": "npm run lint -s && npm run babel -s && npm run minify -s && npm run preamble -s",
     "lint": "jshint src/",
     "babel": "babel src/ -o dist/Datelish.js",
-    "minify": "uglifyjs dist/Datelish.js -mco dist/Datelish.min.js --preamble \"/*github.com/Grafluxe/datelish*/\"",
+    "minify": "uglifyjs dist/Datelish.js -mco dist/Datelish.min.js",
+    "preamble": "preamble -p \"/*github.com/Grafluxe/datelish*/\n\" -o ./dist/Datelish.min.js",
     "doc": "jsdoc -c .jsdocrc"
   },
   "author": "Leandro Silva (http://grafluxe.com)",
@@ -29,6 +30,7 @@
     "boxy-jsdoc-template": "^1.0.0",
     "jsdoc": "^3.4.3",
     "jshint": "^2.9.4",
+    "preamble-cli": "^1.0.0",
     "uglify-js": "^2.7.5"
   }
 }
