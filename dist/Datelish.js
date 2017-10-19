@@ -15,7 +15,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  *            transform dates. It supports both Node and browser use.
  */
 
-//jshint esversion:6, node:true
+// jshint esversion:6, node:true
 
 var Datelish = function () {
   function Datelish() {
@@ -279,7 +279,7 @@ var Datelish = function () {
     }
 
     /**
-     * Returns a date in middle-endian format (MM-DD-YYYY).
+     * Returns a date in middle-endian format (MM/DD/YYYY).
      * @param   {Date}     date          The date to check against.
      * @param   {String=}  divider="/"   The character to use as a divider.
      * @param   {Boolean=} prepend0=true Whether to prepend a "0" if the value is less than the 10.
@@ -523,7 +523,7 @@ var Datelish = function () {
   return Datelish;
 }();
 
-//Support CJS/Node
+// Support CJS/Node
 
 
 if ((typeof module === "undefined" ? "undefined" : _typeof(module)) === "object" && module.exports) {
