@@ -498,21 +498,24 @@ var Datelish = function () {
 
     /**
      * Returns an array of months from the given dates.
-     * @param   {Date}  startDate The start date.
-     * @param   {Date}  endDate   The end date.
+     * @param   {Date}     startDate              The start date.
+     * @param   {Date}     endDate                The end date.
+     * @param   {Boolean=} includeStartDate=false Whether to include the start date in the output.
      * @returns {Array}
      */
 
   }, {
     key: "monthsFrom",
     value: function monthsFrom(startDate, endDate) {
+      var includeStartDate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
       var yrs = (endDate.getFullYear() - startDate.getFullYear()) * 12,
           mth = endDate.getMonth() - startDate.getMonth(),
           dates = [],
-          i = void 0,
+          i = includeStartDate ? 0 : 1,
           len = yrs + mth + 1;
 
-      for (i = 1; i < len; i++) {
+      for (i; i < len; i++) {
         dates.push(new Date(startDate.getFullYear(), startDate.getMonth() + i, 1));
       }
 
