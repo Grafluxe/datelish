@@ -195,11 +195,14 @@ Datelish.monthIndexToName(1, true);
 
 -
 
-#### Datelish.monthsFrom(*startDate, endDate*);
+#### Datelish.monthsFrom(*startDate, endDate, includeStartDate = false*);
 
 ```
 Datelish.monthsFrom(new Date(2016, 1, 1), new Date(2016, 3, 1));
 // Tue Mar 01 2016 00:00:00 GMT-0500 (EST), Fri Apr 01 2016 00:00:00 GMT-0400 (EDT)
+
+Datelish.monthsFrom(new Date(2016, 1, 1), new Date(2016, 3, 1), true);
+// Mon Feb 01 2016 00:00:00 GMT-0500 (EST), Tue Mar 01 2016 00:00:00 GMT-0500 (EST), Fri Apr 01 2016 00:00:00 GMT-0400 (EDT)
 ```
 
 -
@@ -333,20 +336,26 @@ Datelish.yesterday();
 
 -
 
-#### Datelish.prevMonth();
+#### Datelish.prevMonth(*date = null*);
 
 ```
 Datelish.prevMonth();
 // Thu Dec 01 2016 00:00:00 GMT-0500 (EST)
+
+Datelish.prevMonth(new Date(2017, 11, 1));
+// Wed Nov 01 2017 00:00:00 GMT-0400 (EDT)
 ```
 
 -
 
-#### Datelish.nextMonth();
+#### Datelish.nextMonth(*date = null*);
 
 ```
 Datelish.nextMonth();
 // Wed Feb 01 2017 00:00:00 GMT-0500 (EST)
+
+Datelish.nextMonth(new Date(2017, 11, 1));
+// Mon Jan 01 2018 00:00:00 GMT-0500 (EST)
 ```
 
 -
