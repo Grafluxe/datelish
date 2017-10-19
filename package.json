@@ -31,6 +31,6 @@
     "jsdoc": "^3.4.3",
     "jshint": "^2.9.4",
     "preamble-cli": "^1.0.0",
-    "uglify-js": "^2.7.5"
+    "uglify-js": "^3.1.4"
   }
 }
