@@ -378,7 +378,7 @@ class Datelish {
   static dayCount(startDate, endDate) {
     let days = ((((endDate.getTime() - startDate.getTime()) / 1000) / 60) / 60) / 24;
 
-    return days + (startDate.getTimezoneOffset() > endDate.getTimezoneOffset() ? 1 : 0);
+    return Math.floor(days) + (startDate.getTimezoneOffset() > endDate.getTimezoneOffset() ? 1 : 0);
   }
 
   /**
