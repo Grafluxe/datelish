@@ -83,11 +83,15 @@ class Datelish {
       throw new Error("The years method expects a four digit year.");
     }
 
-    if (typeof to === "string") { to = from + parseInt(to, 10); }
+    if (typeof to === "string") {
+      to = from + parseInt(to, 10);
+    }
 
     diff = to - from;
 
-    if (diff < 0) { diff = 0; }
+    if (diff < 0) {
+      diff = 0;
+    }
 
     for (i = 0; i <= diff; i++) {
       arr.push(from + i);
@@ -376,7 +380,7 @@ class Datelish {
    * @returns {Number}
    */
   static dayCount(startDate, endDate) {
-    let days = ((((endDate.getTime() - startDate.getTime()) / 1000) / 60) / 60) / 24;
+    let days = (endDate.getTime() - startDate.getTime()) / 1000 / 60 / 60 / 24;
 
     return Math.floor(days) + (startDate.getTimezoneOffset() > endDate.getTimezoneOffset() ? 1 : 0);
   }
@@ -390,7 +394,7 @@ class Datelish {
    */
   static monthsFrom(startDate, endDate, includeStartDate = false) {
     let yrs = (endDate.getFullYear() - startDate.getFullYear()) * 12,
-        mth = (endDate.getMonth() - startDate.getMonth()),
+        mth = endDate.getMonth() - startDate.getMonth(),
         dates = [],
         i = (includeStartDate ? 0 : 1),
         len = yrs + mth + 1;
